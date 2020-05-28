@@ -26,13 +26,27 @@ class _ProdutosPageState extends State<ProdutosPage> {
     });
   }
 
+  bool onlyNumber(String value){
+    bool result = false;
+    result = RegExp(r'[!@#<>?":_`~;[\]\\|=+)(*&^%0-9-]').hasMatch(value);
+    return result;
+  }
+
+
   void _searchProdutos(value) {
     setState(() {
       try {
-        listaProdutosFiltrada = listaProdutos
-            .where((pro) =>
-                pro.nome.toUpperCase().contains(value.toString().toUpperCase()))
-            .toList();
+        if (onlyNumber(value)) {
+          listaProdutosFiltrada = listaProdutos
+              .where((pro) =>
+                  pro.codigo.toString().toUpperCase().contains(value.toString().toUpperCase()))
+              .toList();
+        }else{
+          listaProdutosFiltrada = listaProdutos
+              .where((pro) =>
+                  pro.nome.toUpperCase().contains(value.toString().toUpperCase()))
+              .toList();
+        }
       } catch (error) {
         print(error);
       }
