@@ -1,136 +1,99 @@
-class Cliente {
-  dynamic cliCodigo;
-  dynamic cliNome;
-  dynamic cliEndereco;
-  dynamic cliBairro;
-  dynamic cliCidade;
-  dynamic cliCep;
-  dynamic cliUf;
-  dynamic cliFone;
-  dynamic cliEmail;
-  dynamic cliDatac;
-  dynamic cliTipo;
-  dynamic cliCelular;
-  dynamic cliEndcorresp;
-  dynamic cliObs;
-  dynamic cliCpfCgc;
-  dynamic cliSituacao;
-  dynamic cliRg;
-  dynamic cliDatanasc;
-  dynamic cliPai;
-  dynamic cliMae;
-  dynamic cliSpc;
-  dynamic cliEstcivil;
-  dynamic cliConjuge;
-  dynamic cliInclusaospc;
-  dynamic cliDatainclusao;
-  dynamic cliCheque;
-  dynamic cliCarteira;
-  dynamic cliAvalista;
-  dynamic cliCpfa;
-  dynamic cliFonea;
-  dynamic cliRga;
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
 
-  Cliente(
-      {this.cliCodigo,
-      this.cliNome,
-      this.cliEndereco,
-      this.cliBairro,
-      this.cliCidade,
-      this.cliCep,
-      this.cliUf,
-      this.cliFone,
-      this.cliEmail,
-      this.cliDatac,
-      this.cliTipo,
-      this.cliCelular,
-      this.cliEndcorresp,
-      this.cliObs,
-      this.cliCpfCgc,
-      this.cliSituacao,
-      this.cliRg,
-      this.cliDatanasc,
-      this.cliPai,
-      this.cliMae,
-      this.cliSpc,
-      this.cliEstcivil,
-      this.cliConjuge,
-      this.cliInclusaospc,
-      this.cliDatainclusao,
-      this.cliCheque,
-      this.cliCarteira,
-      this.cliAvalista,
-      this.cliCpfa,
-      this.cliFonea,
-      this.cliRga});
+class ResumoModel {
+  final double Cheques;
+  final double Juros;
+  final double SubTotalFat;
+  final double SubTotalGeral;
+  final double SubTotalNFat;
+  final double TotalGeral;
+  final double ValorVencer;
+  final double ValorVencido;
 
-  Cliente.fromJson(Map<dynamic, dynamic> json) {
-    cliCodigo = json['cliCodigo'];
-    cliNome = json['cliNome'];
-    cliEndereco = json['cliEndereco'];
-    cliBairro = json['cliBairro'];
-    cliCidade = json['cliCidade'];
-    cliCep = json['cliCep'];
-    cliUf = json['cliUf'];
-    cliFone = json['cliFone'];
-    cliEmail = json['cliEmail'];
-    cliDatac = json['cliDatac'];
-    cliTipo = json['cliTipo'];
-    cliCelular = json['cliCelular'];
-    cliEndcorresp = json['cliEndcorresp'];
-    cliObs = json['cliObs'];
-    cliCpfCgc = json['cliCpfCgc'];
-    cliSituacao = json['cliSituacao'];
-    cliRg = json['cliRg'];
-    cliDatanasc = json['cliDatanasc'];
-    cliPai = json['cliPai'];
-    cliMae = json['cliMae'];
-    cliSpc = json['cliSpc'];
-    cliEstcivil = json['cliEstcivil'];
-    cliConjuge = json['cliConjuge'];
-    cliInclusaospc = json['cliInclusaospc'];
-    cliDatainclusao = json['cliDatainclusao'];
-    cliCheque = json['cliCheque'];
-    cliCarteira = json['cliCarteira'];
-    cliAvalista = json['cliAvalista'];
-    cliCpfa = json['cliCpfa'];
-    cliFonea = json['cliFonea'];
-    cliRga = json['cliRga'];
+  ResumoModel({
+    required this.Cheques,
+    required this.Juros,
+    required this.SubTotalFat,
+    required this.SubTotalGeral,
+    required this.SubTotalNFat,
+    required this.TotalGeral,
+    required this.ValorVencer,
+    required this.ValorVencido,
+  });
+
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'Cheques': Cheques,
+      'Juros': Juros,
+      'SubTotalFat': SubTotalFat,
+      'SubTotalGeral': SubTotalGeral,
+      'SubTotalNFat': SubTotalNFat,
+      'TotalGeral': TotalGeral,
+      'ValorVencer': ValorVencer,
+      'ValorVencido': ValorVencido,
+    };
   }
 
-  Map<dynamic, dynamic> toJson() {
-    final Map<dynamic, dynamic> data = new Map<dynamic, dynamic>();
-    data['cliCodigo'] = this.cliCodigo;
-    data['cliNome'] = this.cliNome;
-    data['cliEndereco'] = this.cliEndereco;
-    data['cliBairro'] = this.cliBairro;
-    data['cliCidade'] = this.cliCidade;
-    data['cliCep'] = this.cliCep;
-    data['cliUf'] = this.cliUf;
-    data['cliFone'] = this.cliFone;
-    data['cliEmail'] = this.cliEmail;
-    data['cliDatac'] = this.cliDatac;
-    data['cliTipo'] = this.cliTipo;
-    data['cliCelular'] = this.cliCelular;
-    data['cliEndcorresp'] = this.cliEndcorresp;
-    data['cliObs'] = this.cliObs;
-    data['cliCpfCgc'] = this.cliCpfCgc;
-    data['cliSituacao'] = this.cliSituacao;
-    data['cliRg'] = this.cliRg;
-    data['cliDatanasc'] = this.cliDatanasc;
-    data['cliPai'] = this.cliPai;
-    data['cliMae'] = this.cliMae;
-    data['cliSpc'] = this.cliSpc;
-    data['cliEstcivil'] = this.cliEstcivil;
-    data['cliConjuge'] = this.cliConjuge;
-    data['cliInclusaospc'] = this.cliInclusaospc;
-    data['cliDatainclusao'] = this.cliDatainclusao;
-    data['cliCheque'] = this.cliCheque;
-    data['cliCarteira'] = this.cliCarteira;
-    data['cliAvalista'] = this.cliAvalista;
-    data['cliCpfa'] = this.cliCpfa;
-    data['cliFonea'] = this.cliFonea;
-    data['cliRga'] = this.cliRga;
-    return data;
+  factory ResumoModel.fromMap(Map<String, dynamic> map) {
+    return ResumoModel(
+      Cheques: map['Cheques'] / 100 * 100 as double,
+      Juros: map['Juros'] / 100 * 100 as double,
+      SubTotalFat: map['SubTotalFat'] / 100 * 100 as double,
+      SubTotalGeral: map['SubTotalGeral'] / 100 * 100 as double,
+      SubTotalNFat: map['SubTotalNFat'] / 100 * 100 as double,
+      TotalGeral: map['TotalGeral'] / 100 * 100 as double,
+      ValorVencer: map['ValorVencer'] / 100 * 100 as double,
+      ValorVencido: map['ValorVencido'] / 100 * 100 as double,
+    );
   }
+
+  factory ResumoModel.Empty() {
+    return ResumoModel(
+      Cheques: 0,
+      Juros: 0,
+      SubTotalFat: 0,
+      SubTotalGeral: 0,
+      SubTotalNFat: 0,
+      TotalGeral: 0,
+      ValorVencer: 0,
+      ValorVencido: 0,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory ResumoModel.fromJson(String source) =>
+      ResumoModel.fromMap(json.decode(source) as Map<String, dynamic>);
+}
+
+class ClienteModel {
+  final int codigo;
+  final String nome;
+  final ResumoModel? resumo;
+
+  ClienteModel({required this.codigo, required this.nome, this.resumo});
+
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'codigo': codigo,
+      'nome': nome,
+      'resumo': resumo?.toMap(),
+    };
+  }
+
+  factory ClienteModel.fromMap(Map<String, dynamic> map) {
+    return ClienteModel(
+      codigo: map['codigo'] as int,
+      nome: map['nome'] as String,
+      resumo: map['resumo'] != null && map['resumo'].toString() != "{}"
+          ? ResumoModel.fromMap(map['resumo'] as Map<String, dynamic>)
+          : null,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory ClienteModel.fromJson(String source) =>
+      ClienteModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

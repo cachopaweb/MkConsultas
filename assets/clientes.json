@@ -1,0 +1,70 @@
+[
+    {
+        "codigo": 609,
+        "nome": "JORLINDO VIVEIRO LUZ 151",
+        "resumo": "{}"
+    },
+    {
+        "codigo": 706,
+        "nome": "CLAUDINEI CANUTU 56 *",
+        "resumo": "{}"
+    },
+    {
+        "codigo": 32,
+        "nome": "MADALENA MARANGONI",
+        "resumo": {
+            "Cheques": 0,
+            "Juros": 1166.3882,
+            "SubTotalFat": 205.54,
+            "SubTotalGeral": 205.54,
+            "SubTotalNFat": 0,
+            "TotalGeral": 1371.9282,
+            "ValorVencer": 0,
+            "ValorVencido": 205.54
+        }
+    },
+    {
+        "codigo": 12,
+        "nome": "ADELINO COSTA MIRANDA 04 *",
+        "resumo": "{}"
+    },
+    {
+        "codigo": 545,
+        "nome": "ADELINO MARQUES 110 ( NAO LANCAR)",
+        "resumo": "{}"
+    },
+    {
+        "codigo": 353,
+        "nome": "ADELIO BARROSO MORAES 64",
+        "resumo": "{}"
+    },
+    {
+        "codigo": 50,
+        "nome": "ADEMAR (A€OUGUE) 52",
+        "resumo": {
+            "Cheques": 0,
+            "Juros": 0,
+            "SubTotalFat": 0,
+            "SubTotalGeral": 27.98,
+            "SubTotalNFat": 27.98,
+            "TotalGeral": 27.98,
+            "ValorVencer": 0,
+            "ValorVencido": 27.98
+        }
+    },
+    {
+        "codigo": 562,
+        "nome": "ADEMIR BASILIO SANTOS JUNIOR  87",
+        "resumo": "{}"
+    },
+    {
+        "codigo": 173,
+        "nome": "ADEMIR RICCI 26",
+        "resumo": "{}"
+    },
+    {
+        "codigo": 48,
+        "nome": "ADMILSON ARAUJO 50 (NAO LANCAR)",
+        "resumo": "{}"
+    }
+]

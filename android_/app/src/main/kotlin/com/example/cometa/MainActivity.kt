@@ -1,4 +1,4 @@
-package com.example.MkConsultas
+package com.example.cometa
 
 import io.flutter.embedding.android.FlutterActivity
 
