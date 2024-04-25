@@ -19,6 +19,7 @@ class ProdutosPage extends StatefulWidget {
 
 class _ProdutosPageState extends State<ProdutosPage> {
   var f = NumberFormat.currency(locale: 'pt_BR', decimalDigits: 2, symbol: '');
+  final controllerSearchEdit = TextEditingController();
   String search = '';
   bool isSearching = false;
   bool isLoading = false;
@@ -66,7 +67,13 @@ class _ProdutosPageState extends State<ProdutosPage> {
     return GestureDetector(
       onTap: () {
         Navigator.of(context)
-            .pushNamed('/produto_detalhes', arguments: produto);
+            .pushNamed('/produto_detalhes', arguments: produto)
+            .then((value) {
+          setState(() {
+            search = '';
+            controllerSearchEdit.clear();
+          });
+        });
       },
       child: Card(
         elevation: 5,
@@ -180,6 +187,7 @@ class _ProdutosPageState extends State<ProdutosPage> {
             : TextField(
                 style: TextStyle(color: Colors.white),
                 autofocus: true,
+                controller: controllerSearchEdit,
                 keyboardType: tipoBusca == TTipoBusca.Codigo
                     ? TextInputType.number
                     : TextInputType.text,

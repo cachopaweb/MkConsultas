@@ -17,7 +17,7 @@ class ProdutoServiceCache extends IProdutoService {
       case TTipoBusca.Descricao:
         listaFiltrada = listaProdutos
             .where((e) =>
-                e.proDescricao.toLowerCase().contains(busca.toUpperCase()))
+                e.proDescricao.toUpperCase().contains(busca.toUpperCase()))
             .toList();
         break;
       case TTipoBusca.Nome:

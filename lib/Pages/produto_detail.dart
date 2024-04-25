@@ -38,7 +38,7 @@ class ProdutoDetail extends StatelessWidget {
                 SizedBox(
                   width: 0, //10,
                 ),
-                Campos(title: 'ABC AN', value: produto.proAbcAnalitico),
+                Campos(title: 'ABC+', value: produto.proAbcAnalitico),
                 SizedBox(
                   width: 0, //10,
                 ),
@@ -148,7 +148,7 @@ class ProdutoDetail extends StatelessWidget {
         centerTitle: true,
       ),
       body: SizedBox(
-        height: size.height * 0.65,
+        height: size.height * 0.75,
         width: size.width,
         child: _buildBody(),
       ),
