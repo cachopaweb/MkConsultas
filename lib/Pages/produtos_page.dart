@@ -1,12 +1,12 @@
-import 'dart:async';
-import 'package:cometa/Models/Produto.dart';
-import 'package:cometa/stores/produto_store.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_triple/flutter_triple.dart';
+import 'dart:async';
 import 'package:intl/intl.dart';
+import 'package:flutter_triple/flutter_triple.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../Services/produto_service_cache.dart';
+import '../Models/Produto.dart';
+import '../Services/produto_service_rest.dart';
+import '../stores/produto_store.dart';
 
 class ProdutosPage extends StatefulWidget {
   final String baseUrl;
@@ -25,7 +25,7 @@ class _ProdutosPageState extends State<ProdutosPage> {
   bool isLoading = false;
   TTipoBusca tipoBusca = TTipoBusca.Descricao;
   Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-  final storeProduto = ProdutoStore(ProdutoServiceCache());
+  final storeProduto = ProdutoStore(ProdutoServiceRest());
 
   @override
   void dispose() {

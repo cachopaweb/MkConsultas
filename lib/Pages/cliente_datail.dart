@@ -30,29 +30,29 @@ class ClienteDetail extends StatelessWidget {
           children: <Widget>[
             Campos(
                 nomeCampo: 'Faturado (+):',
-                valorCampo: formatCurr.format(resumoModel.SubTotalFat)),
+                valorCampo: formatCurr.format(resumoModel.subTotalFat)),
             Campos(
               nomeCampo: 'Não Faturado (+):',
-              valorCampo: formatCurr.format(resumoModel.SubTotalNFat),
+              valorCampo: formatCurr.format(resumoModel.subTotalNFat),
             ),
             Campos(
               nomeCampo: 'Fat + Não Fat (=):',
-              valorCampo: formatCurr.format(resumoModel.SubTotalGeral),
+              valorCampo: formatCurr.format(resumoModel.subTotalGeral),
             ),
             Campos(
               nomeCampo: 'Cheques (-):',
-              valorCampo: formatCurr.format(resumoModel.Cheques),
+              valorCampo: formatCurr.format(resumoModel.cheques),
               cor: Colors.red,
             ),
             Campos(
               nomeCampo: 'SubTotal (=):',
               valorCampo: formatCurr
-                  .format(resumoModel.SubTotalGeral - resumoModel.Cheques),
+                  .format(resumoModel.subTotalGeral - resumoModel.cheques),
               cor: Colors.blue,
             ),
             Campos(
               nomeCampo: 'Juros (+):',
-              valorCampo: formatCurr.format(resumoModel.Juros),
+              valorCampo: formatCurr.format(resumoModel.juros),
             ),
             Divider(
               thickness: 2,
@@ -60,7 +60,7 @@ class ClienteDetail extends StatelessWidget {
             ),
             Campos(
               nomeCampo: 'Total Geral:',
-              valorCampo: formatCurr.format(resumoModel.TotalGeral),
+              valorCampo: formatCurr.format(resumoModel.totalGeral),
             ),
           ],
         ),

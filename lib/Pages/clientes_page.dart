@@ -1,9 +1,9 @@
-import 'package:cometa/Models/Cliente.dart';
-import 'package:cometa/stores/cliente_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_triple/flutter_triple.dart';
 
-import '../Services/cliente_service_cache.dart';
+import '../Models/Cliente.dart';
+import '../Services/cliente_service_rest.dart';
+import '../stores/cliente_store.dart';
 
 class ClientesPage extends StatefulWidget {
   final String baseUrl;
@@ -17,7 +17,7 @@ class ClientesPage extends StatefulWidget {
 class _ClientesPageState extends State<ClientesPage> {
   bool isSearching = false;
   String search = '';
-  final storeCliente = ClienteStore(ClienteServiceCache());
+  final storeCliente = ClienteStore(ClienteServiceRest());
 
   @override
   void initState() {

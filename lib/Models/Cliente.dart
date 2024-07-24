@@ -2,62 +2,62 @@
 import 'dart:convert';
 
 class ResumoModel {
-  final double Cheques;
-  final double Juros;
-  final double SubTotalFat;
-  final double SubTotalGeral;
-  final double SubTotalNFat;
-  final double TotalGeral;
-  final double ValorVencer;
-  final double ValorVencido;
+  final double cheques;
+  final double juros;
+  final double subTotalFat;
+  final double subTotalGeral;
+  final double subTotalNFat;
+  final double totalGeral;
+  final double valorVencer;
+  final double valorVencido;
 
   ResumoModel({
-    required this.Cheques,
-    required this.Juros,
-    required this.SubTotalFat,
-    required this.SubTotalGeral,
-    required this.SubTotalNFat,
-    required this.TotalGeral,
-    required this.ValorVencer,
-    required this.ValorVencido,
+    required this.cheques,
+    required this.juros,
+    required this.subTotalFat,
+    required this.subTotalGeral,
+    required this.subTotalNFat,
+    required this.totalGeral,
+    required this.valorVencer,
+    required this.valorVencido,
   });
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'Cheques': Cheques,
-      'Juros': Juros,
-      'SubTotalFat': SubTotalFat,
-      'SubTotalGeral': SubTotalGeral,
-      'SubTotalNFat': SubTotalNFat,
-      'TotalGeral': TotalGeral,
-      'ValorVencer': ValorVencer,
-      'ValorVencido': ValorVencido,
+      'cheques': cheques,
+      'juros': juros,
+      'subTotalFat': subTotalFat,
+      'subTotalGeral': subTotalGeral,
+      'subTotalNFat': subTotalNFat,
+      'totalGeral': totalGeral,
+      'valorVencer': valorVencer,
+      'valorVencido': valorVencido,
     };
   }
 
   factory ResumoModel.fromMap(Map<String, dynamic> map) {
     return ResumoModel(
-      Cheques: map['Cheques'] / 100 * 100 as double,
-      Juros: map['Juros'] / 100 * 100 as double,
-      SubTotalFat: map['SubTotalFat'] / 100 * 100 as double,
-      SubTotalGeral: map['SubTotalGeral'] / 100 * 100 as double,
-      SubTotalNFat: map['SubTotalNFat'] / 100 * 100 as double,
-      TotalGeral: map['TotalGeral'] / 100 * 100 as double,
-      ValorVencer: map['ValorVencer'] / 100 * 100 as double,
-      ValorVencido: map['ValorVencido'] / 100 * 100 as double,
+      cheques: map['cheques'] / 100 * 100 as double,
+      juros: map['juros'] / 100 * 100 as double,
+      subTotalFat: map['subTotalFat'] / 100 * 100 as double,
+      subTotalGeral: map['subTotalGeral'] / 100 * 100 as double,
+      subTotalNFat: map['subTotalNFat'] / 100 * 100 as double,
+      totalGeral: map['totalGeral'] / 100 * 100 as double,
+      valorVencer: map['valorVencer'] / 100 * 100 as double,
+      valorVencido: map['valorVencido'] / 100 * 100 as double,
     );
   }
 
   factory ResumoModel.Empty() {
     return ResumoModel(
-      Cheques: 0,
-      Juros: 0,
-      SubTotalFat: 0,
-      SubTotalGeral: 0,
-      SubTotalNFat: 0,
-      TotalGeral: 0,
-      ValorVencer: 0,
-      ValorVencido: 0,
+      cheques: 0,
+      juros: 0,
+      subTotalFat: 0,
+      subTotalGeral: 0,
+      subTotalNFat: 0,
+      totalGeral: 0,
+      valorVencer: 0,
+      valorVencido: 0,
     );
   }
 
